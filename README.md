@@ -43,7 +43,9 @@ After cleaning and training the data, this model acheive up to 0.8 accuracy.
 ![TensorBoard Accuracy](https://github.com/noorhanifah/Categorizing-Articles-NLP/blob/main/Tensorboard/tensorboard_accuracy.PNG)
 
 ## A little discussion
-For this dataset I belief that, a higher accuracy can be achieve through other approach of data cleaning and selecting features. For a better prediction especilly for medical purpose, a small 300 hundred data is not enough as there are many possibilities could occur. For example, in this dataset, age has a relatively low correlation with the outcome of having a heart attack. Older people is known to have a higher risk of having a heart attack, however, it does not apply to this dataset. Therefore, more testing need to be done to determine the ability of this model to make a better prediction.
+This model is able to categorize articles and the training also gives a high accuracy of more than 90% and a high and balance f-1 score among the outcome, thus give a little sense of great achivement. Unfortunately for this model, it actually overfit. Overfitting happens when a model learns the detail and noise in the training data. The noise or random fluctuations in the training data is picked up and learned as concepts by this model making it unable to categorize new data correctly.
+
+One of the way to prevent overfitting is by using early callback. However, this approach does not seems to fix the problem. Therefore, to prevent overfitting for this model, one of the approach that I think could solve the problem is by removing Stopwords from the dataset during the data cleaning step. Stopwords in English such as “a”, “the”, “is”, and “are” carry very little useful information in sentences. By removing these words, the low-level information from the text this model can focus more on important information thus preventing the model from learning too much.
 
 ## Build With
  ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
@@ -55,13 +57,6 @@ For this dataset I belief that, a higher accuracy can be achieve through other a
  ![GoogleColab](	https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
 
 ## Credit
-The dataset can be downloaded from Kaggle dataset at https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset. 
+The dataset is accessible from Github at https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv
 
-Creator of the dataset.
-1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
-2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
-3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.
-4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.
-
-For more dataset information: 
-http://archive.ics.uci.edu/ml/datasets/Heart+Disease
+Thank you, Susan Li (https://github.com/susanli2016) for making the dataset to be publicly accessible. It gives me the opportunity to learn and practice more on machine learning.  
