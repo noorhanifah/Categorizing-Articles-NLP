@@ -1,17 +1,17 @@
-# Categorizing Articles (NLP) Using Deep Learning
+# Categorizing Articles (NLP) Using TensorFlow
  
 ## Project Description
 Text documents are essential since they are one of the richest sources of data for businesses. Text documents often contain crucial information which might shape the market trends or influence the investment flows. Therefore, companies often hire analysts to monitor the trend via articles posted online, tweets on social media platforms such as Twitter or articles from newspaper. However, some companies may wish to only focus on articles related to technologies and politics. Thus, filtering of the articles into different categories is required.
 
-Often the categorization of the articles is conduced manually and retrospectively; wasting so much time and resources due to this arduous task. The task can be done using machine learning, which the articles are sorted according to their category. The objective of this project is to effectively categorize the unseen articles into 5 categories namely Sport, Tech, Business, Entertainment and Politics.
+Often the categorization of the articles is conduced manually and retrospectively; wasting so much time and resources due to this arduous task. The task can be done using Natural Language Processing or NLP techniques, which A huge volumes of digital text or articles are sorted according to their category. 
+
+The objective of this project is to effectively categorize the unseen articles into 5 categories namely Sport, Tech, Business, Entertainment and Politics.
 
 ## Running the Project
-This model run using Python programming and the libraries available. 
+This model run using Python programming and the libraries available. The training and validation graph are plotted using Tensorboard. TensorFlow library is used to develop and train this model.
 
 ## Project Insight
-To achieve the objective of this project, machine learning approach is used considering the dataset availabel. This project used pipelines to predict which machine learning approach is the best suited for this dataset. The machine learning approach used are Logistic Regression, Decision Tree, Random Forest, Gradient Boosting(gboost) and K Nearest Neighbor. Hyperparameter tuning is applied to the model that give the highest score. 
-
-The selected model is then tested with new dataset to determine the accuracy of the model with another dataset. Testing the model also important to verify the usability of the model with another data. 
+To achieve the objective of this project, recurrent neural network approach is used considering the nature of the dataset. This project also used neural network for NLP model training. Since this project is analyzing articles which is text, the text need to be converted into something that can be understand by machine. Therefore, tokenization is used which will break raw text into small parts called tokens. Embedding is also applied in this neural network allowing a large input to be processes in this model. Embedding is the process of converting high-dimensional data to low-dimensional data in the form of a vector in such a way that the two are semantically similar. Other than that, this model training also use Bidirectional LSTM instead of only LSTM as input flow. This is because the Bidirectional LSTM input, flows in both directions, forward and backwards, thus storing information used for future cell processing. 
 
 ## Accuracy
 After cleaning, selecting the best features and training the data, this model acheive up to 0.8 accuracy. The best machine learning approach for this dataset is Logistic Regression with Standard Scaler giving the score of 0.82. 
